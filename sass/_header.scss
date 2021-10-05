@@ -25,6 +25,10 @@
   &__btn {
     align-self: start;
     justify-self: start;
+
+    @media only screen and (max-width: $bp-small) {
+      justify-self: center;
+    }
   }
 
   &__seenon-text {
@@ -59,10 +63,14 @@
       filter: brightness(70%);
     }
   }
-}
 
-@media (max-width: 875px) {
-  .header {
+  @media only screen and (max-width: $bp-medium) {
     grid-column: full-start / full-end;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+    text-align: center;
+    grid-row-gap: 2.5rem;
   }
 }
